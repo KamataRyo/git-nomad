@@ -1,7 +1,7 @@
 {
   "name": "git-nomad",
   "version": "0.1.0",
-  "description": "Provide git-subcommand to make commit with geolocation information",
+  "description": "*git-nomad* provides your location to git commit message",
   "bin": {
     "git-nomad": "index.js"
   },
