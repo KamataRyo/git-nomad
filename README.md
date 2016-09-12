@@ -16,7 +16,7 @@ $ git nomad -m"Update something"
 $ git nomad --message "Update something"
 ```
 
-Those commands works as well as `$ git commit -m"Update something @lat, long"`.
+Those commands work as well as `$ git commit -m"Update something @lat, long"`.
 
 `lat` and `long` represent your location when you make commit.
 
