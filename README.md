@@ -29,6 +29,5 @@ Inspired by [git-whereami](https://github.com/evantahler/git-whereami).
 
 Dependes on [WhereAmI](https://github.com/robmathers/WhereAmI), the OSX geolocation commandline tool.
 
-
 [npm-image]: https://img.shields.io/npm/v/git-nomad.svg
 [npm-url]: https://npmjs.org/package/git-nomad
