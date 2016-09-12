@@ -1,6 +1,6 @@
 {
   "name": "git-nomad",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "git-nomad provides your geolocation to git commit message",
   "bin": {
     "git-nomad": "index.js"
