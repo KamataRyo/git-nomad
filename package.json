@@ -1,0 +1,34 @@
+{
+  "name": "git-nomad",
+  "version": "0.1.0",
+  "description": "Provide git-subcommand to make commit with geolocation information",
+  "bin": {
+    "git-nomad": "index.js"
+  },
+  "scripts": {
+    "install": "curl $npm_package_config_whereami | tar -xzv",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KamataRyo/git-nomad.git"
+  },
+  "os": [
+    "darwin"
+  ],
+  "preferGlobal" : true,
+  "keywords": [
+    "git",
+    "cli",
+    "nomad"
+  ],
+  "author": "KamataRyo <mugil.cephalus+github.com@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KamataRyo/git-nomad/issues"
+  },
+  "homepage": "https://github.com/KamataRyo/git-nomad#readme",
+  "config": {
+    "whereami": "https://github.com/robmathers/WhereAmI/releases/download/v1.02/whereami-1.02.zip"
+  }
+}
