@@ -5,8 +5,16 @@
 git-nomad provides your geolocation to git commit message.
 
 ## install
+
+### globally
+
 ```
 $ npm i -g git-nomad
+```
+
+### locally
+```
+$ npm i git-nomad
 ```
 
 ## usage

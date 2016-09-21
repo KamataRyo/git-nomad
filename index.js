@@ -1,10 +1,22 @@
 #!/usr/bin/env node
+
 var exec     = require('child_process').exec
+var format   = require('util').format
 var whereami = require('./whereami.js').whereami
 
+/**
+ * git nommad options parsed.
+ * @type {Array}
+ */
 var options = process.argv.slice(2)
 
+/**
+ * index of argument `message` contained for handling information
+ * @type {Number}
+ */
 var messageIndex = -1
+
+
 options.forEach((arg, index, args) => {
 	// detect specific argument
 	if (('--message' == arg) || ('-m' == arg)) {
@@ -16,7 +28,12 @@ options.forEach((arg, index, args) => {
 
 if (messageIndex != -1) {
 	whereami.then((location) => {
-		options[messageIndex] = `"${options[messageIndex]} @${location.latitude},${location.longitude}"`
+		options[messageIndex] = format(
+			process.env.npm_package_config_messageFormat,
+			options[messageIndex],
+			location.latitude,
+			location.latitude
+		)
 		command = "git commit " + options.join(' ')
 		exec(command, (error, stdout, stdin) => {
 			console.log(error ? error : stdout)

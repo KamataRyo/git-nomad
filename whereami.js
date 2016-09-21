@@ -1,5 +1,18 @@
+/**
+ * WhereAmI Nodejs wrapper.
+ */
+
+/**
+ * Execute command as child process
+ * @type Function
+ */
 var exec = require('child_process').exec;
 
+/**
+ * Parse stdout of WhereAmI and return JSON.
+ * @param  {String} result [WhereAmI result from stdout]
+ * @return {Object}          [Parsed JSON]
+ */
 parse = (result) => {
 	map = {}
 	result.split('\n').filter((line) => {
@@ -13,6 +26,10 @@ parse = (result) => {
 	return map
 }
 
+/**
+ * Exportation wrapped by promise error handling.
+ * @type {Promise}
+ */
 exports.whereami = new Promise((fulfilled, rejected) => {
 	exec(`${__dirname}/whereami`, (error, stdout, stdin) => {
 		if (error) {

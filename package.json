@@ -1,6 +1,6 @@
 {
   "name": "git-nomad",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "git-nomad provides your geolocation to git commit message",
   "bin": {
     "git-nomad": "index.js"
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/KamataRyo/git-nomad#readme",
   "config": {
-    "whereami": "https://github.com/robmathers/WhereAmI/releases/download/v1.02/whereami-1.02.zip"
+    "whereami": "https://github.com/robmathers/WhereAmI/releases/download/v1.02/whereami-1.02.zip",
+    "messageFormat": "%s\n[@%s,%s]"
   }
 }
